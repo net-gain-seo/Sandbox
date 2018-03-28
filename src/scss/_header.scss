@@ -1,0 +1,286 @@
+header{
+  position: relative;
+  z-index: 99999;
+  height: 180px;
+  background-color: $gray;
+}
+.logo {
+  width: 60%;
+  display: inline-block;
+  float: left;
+  a img{
+    float: left;
+    padding: 50px 0px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+  }
+}
+.whitefade{
+  max-width: 1210px;
+  height: 250px;
+  background-image: url('http://209.126.119.193/~sandbox/wp-content/uploads/2018/01/whitefade.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 999;
+  top: 0px;
+  right: 0px;
+  h1{
+      color: black;
+      text-align: right;
+      margin-top: 40px;
+      margin-right: 100px;
+      font-weight: bold;
+  }
+}
+.bluebanner{
+  height: 100%;
+  height: -webkit-fill-available;
+  width: 2000%;
+  position: absolute;
+  background-color: #0033a1;
+}
+.address{
+  color: $primarybackgroundColor;
+  line-height: 1.2;
+}
+.button{
+  padding: 12px 30px;
+}
+.socialIcons{
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.header-nav{
+  width: 40%;
+  float: left;
+  height: 100%;
+  height: -webkit-fill-available;
+  background-color: #0033a1;
+  color: white;
+}
+.header-nav {
+  background-color: $primaryColor;
+  color: white;
+    .mobile-icons {
+        display: none;
+    }
+}
+#featured-image{
+  overflow: hidden;
+  img{
+  width: 100%;
+  position: relative;
+  }
+}
+.post_title{
+  width: 100%;
+  h1{
+    text-align: center;
+    color: #231F20;
+    font-size: 3.5rem;
+    margin: auto;
+    line-height: 1.5;
+    padding: 40px;
+  }
+}
+.PageSummary{
+
+  p{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+}
+.stickylogo{
+  overflow: hidden;
+  height: 0px;
+}
+.sticky-header .stickylogo{
+  height: auto;
+  overflow: visible;
+}
+.sticky-header .stickylogo img {
+    width: 120px;
+    height: auto;
+    overflow: visible;
+}
+.stickylogo img {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+/** Remove unneeded stuff -- this was a copy pasta from ngmvp */
+.sticky-header {
+    .stickylogo {
+        position: fixed;
+        top: 0px;
+        z-index: 99999;
+        transition: height 0.2s ease-in-out;
+    }
+    .main-nav a {
+        display: block;
+        background-color: transparent;
+        color: white;
+        transition: all 0.15s ease-in;
+    }
+    header {
+      position: fixed;
+      z-index: 99997;
+      left: 0;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+      height: 180px;
+      transition: max-height 0.15s ease-in-out;
+        > div { // .container
+            // width: 100%;
+            // padding: 0;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+      padding-top: 180px;
+}
+#wpadminbar {
+    z-index: 99996 !important;
+}
+.mobile-icons {
+    a {
+        min-height: 50px;
+        line-height: 50px;
+    }
+}
+.mobile-icons {
+    overflow: hidden;
+    display: none;
+    font-size: 22px;
+    a {
+        display: inline-block;
+        color: #fff;
+        margin-left: 10px;
+        line-height: 1.5;
+        padding-top: 20px;
+        text-align: center;
+        span {
+            display: block;
+            font-size: 14px;
+        }
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+    .nav-phone,
+    .nav-contact {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.175s ease-in;
+    }
+    .nav-phone .fa {
+        position: relative;
+        top: 2px;
+    }
+}
+
+.close-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 99999;
+    background-color: $secondaryColor;
+    border-bottom: 1px solid darken($primaryColor,15%);
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-400px);
+    transition: transform 0.15s ease-in-out;
+    &.open {
+        max-width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: $screen-lg-min) {
+    .header-nav {
+        > div {
+            max-width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .mobile-icons {
+            display: block;
+            text-align: right;
+            a {
+                color: #ffffff;
+                background-color: $secondaryColor;
+                padding: 8px 25px;
+            }
+        }
+    }
+
+    .sticky-header {
+        .mobile-icons {
+            .nav-phone,
+            .nav-contact {
+                visibility: visible;
+                opacity: 1;
+                // transition: opacity 0.175s ease-in;
+            }
+        }
+    }
+    #closeNav.open {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: $screen-lg-min) {
+  .header-nav .mobile-icons {
+      display: block;
+      text-align: right;
+      z-index: 999;
+      position: relative;
+  }
+    .mobile-icons {
+        .nav-phone,
+        .nav-contact {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+    .site-header {
+        .logo {
+            order: 2;
+            margin: 0 auto;
+        }
+    }
+    .header-block {
+        flex-basis: 100%;
+        justify-content: center;
+        .family-operated {
+            display: none;
+        }
+        .social {
+            padding-top: 16px;
+            margin-bottom: 12px;
+        }
+    }
+    .i-google-review {
+        margin-right: 0;
+    }
+}

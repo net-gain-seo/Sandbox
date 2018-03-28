@@ -1,0 +1,169 @@
+#closeNav {
+    display: none;
+}
+.main-nav {
+    // Common to all elements
+    z-index: 99999;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    float: right;
+    padding-bottom: 0px;
+    padding-top: 97px;
+    a {
+        display: block;
+        padding: 25px 15px;
+        background-color: transparent;
+        color: white;
+        font-size: 2.2rem;
+        transition: all 0.15s ease-in;
+        font-family: $pFont;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+      position: relative;
+      line-height: 1.5;
+      padding-left: 0px;
+      margin-bottom: 0rem;
+      .current_page_item > a {
+          background-color: white;
+          color: $secondaryColor!important;
+            &:hover {
+            //background-color: $secondaryColor;
+            }
+        }
+        &.current_page_parent > a{
+            //background-color: $secondaryColor;
+        }
+    }
+}
+
+// Level 1 specific
+.main-nav {
+    z-index: 99999;
+    position: relative;
+    margin-right: -15px;
+    > ul {
+        display: flex;
+        justify-content: flex-end;
+        > li {
+            > a {
+                position: relative;
+                //margin-left: 1px;
+                transition: height 0.2s ease-in-out;
+                &:hover {
+                    &::after {
+                        height: 10px;
+                    }
+                }
+            }
+            &:hover {
+                > a {
+                    position: relative;
+                    //margin-left: 1px;
+                    transition: height 0.2s ease-in-out;
+                }
+            }
+        }
+        > li {
+            //margin-left: 1px;
+            &:hover {
+                a {
+            //background-color: $secondaryColor;
+                }
+                > ul {
+                    opacity: 1;
+                    left: 0;
+                    z-index: 10;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+// Level 2 specific
+.main-nav {
+    ul ul {
+        position: absolute;
+        left: -9999em;
+        transition: opacity 0.15s ease-in;
+        background-color: $secondaryColor;
+        width: max-content;
+        li {
+          color: white;
+            a {
+              transition: background-color 0.2s ease-in-out;
+              color: white!important;
+              font-size: 2rem;
+              padding: 10px 50px 10px 25px;
+              text-align: left;
+              line-height: 1.3;
+                &:hover {
+                    background-color: white;
+                    background: white;
+                    color: $secondaryColor!important;
+                }
+            }
+            .current-menu-item > a, .current-menu-parent > a{
+              background-color: white;
+              color: $secondaryColor!important;
+            }
+        }
+    }
+    #menu-main-menu ul li:hover > ul{
+    position: absolute;
+    left: 300px;
+    top: -10px;
+    padding: 10px 0px 10px 10px;
+    background-color: $primarybackgroundColor;
+    li{
+      color: white;
+    }
+    li:hover{
+      background-color: $secondaryColor;
+      background: $secondaryColor;
+      color: white;
+      a:hover{
+        background-color: $secondaryColor;
+        background: $secondaryColor;
+        color: white;
+      }
+    }
+    .current_page_item {
+      background-color: white;
+      color: $secondaryColor!important;
+    }
+  }
+}
+.sticky-header .main-nav {
+    ul ul {
+        position: absolute;
+        left: -9999em;
+        transition: opacity 0.15s ease-in;
+        width: max-content;
+        li {
+          color: white;
+            white-space: nowrap;
+            a {
+                transition: background-color 0.2s ease-in-out;
+                font-size: 2rem;
+                padding: 10px 50px 10px 25px;
+                text-align: left;
+                line-height: 1.3;
+                &:hover {
+                    background-color: white;
+                    color: $secondaryColor;
+                }
+            }
+        }
+        .current-menu-item > a, .current-menu-parent > a{
+          background-color: white;
+          color: $secondaryColor!important;
+        }
+    }
+}
