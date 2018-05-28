@@ -23,8 +23,8 @@
             <?php endwhile; // End of the loop. ?>
 
             <div class="next-prev">
-                <div class="prev"><?php previous_post_link('%link', '< <span>Previous Post</span>', FALSE); ?></div>
-                <div class="next"><?php next_post_link('%link', '<span>Next Post</span> >', FALSE); ?></div>
+                <div class="prev"><?php previous_post_link('%link', '<img src="https://www.chapmanmcalpine.com/wp-content/uploads/2018/01/left-arrow.jpg" class="dirarrow"> <span>Previous Post</span>', FALSE); ?></div>
+                <div class="next"><?php next_post_link('%link', '<span>Next Post</span> <img src="https://www.chapmanmcalpine.com/wp-content/uploads/2018/01/right-arrow.jpg" class="dirarrow">', FALSE); ?></div>
             </div>
         </div>
     </div>

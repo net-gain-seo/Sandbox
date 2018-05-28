@@ -11,7 +11,8 @@
 <header class="site-header">
     <div id="flexHeader" class="container flex-header padding0">
           <div id="logosection">
-              <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="SandBox Logo" width="475"></a></div>
+              <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="SandBox Logo" width="425"></a></div>
+              <div class="stickylogo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/stickylogo.png" alt="SandBox Logo" width="180"></a></div>
           </div>
           <div class="header-nav">
             <div class="bluebanner"></div>

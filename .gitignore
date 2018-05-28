@@ -16,8 +16,6 @@
 # ignore the compiled stylesheet and sourcemaps
 main.css
 *.map
-*.mp4
-*.MP4
 
 # let dev stuff through
 !gulpfile.js
